@@ -1,0 +1,24 @@
+<div class="create-form">
+    <div class="form-group">
+        <label for="input title">Movie Title</label>
+        <input type="text" [(ngModel)]="movie.title" class="form-control" placeholder="Title">
+    </div>
+    <div class="form-group">
+        <label for="input duration">Duration</label>
+        <input type="text" [(ngModel)]="movie.duration" class="form-control" placeholder="Duration in Minutes">
+    </div>
+    <div class="form-group">
+        <label for="input genre">Genre</label>
+        <input type="text" [(ngModel)]="movie.genre" class="form-control" placeholder="genre">
+    </div>
+    <div class="form-group">
+        <label for="dropdown ratings">Rating (select one)</label>
+        <select class="form-control" [(ngModel)]="movie.rating">
+            <option>G</option>
+            <option>PG</option>
+            <option>PG-13</option>
+            <option>R</option>
+        </select>
+    </div>
+    <button type="button" (click)="processCreate()" routerlink="/movies" class="btn btn-dark">Create</button>
+</div>
